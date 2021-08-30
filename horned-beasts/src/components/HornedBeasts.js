@@ -1,17 +1,41 @@
 import React from "react";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 class HornedBeasts extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: 0,
+    };
+  }
+
+  likesFunction = () => {
+    this.setState({
+      likes: this.state.likes + 1,
+    });
+  };
+
   render() {
-    console.log("props: ", this.props);
+    // console.log("props: ", this.props);
     return (
-      <div>
-        <h2>{this.props.title}</h2>
-        <p>{this.props.description}</p>
-        <p>Number of horns: {this.props.horns}</p>
-        <img src={this.props.image_url} alt="" />
-      </div>
+      <Card style={{ width: "21rem", margin:"20px", display: "inline-block"}}>
+        <Card.Img
+          variant="top"
+          src={this.props.image_url}
+          onClick={this.likesFunction}
+          style={{ height: "18rem"}}
+        />
+        <Card.Body>
+          <Card.Title style={{ height: "35px"}}>{this.props.title}</Card.Title>
+          <Card.Text   style={{ height: "5.1rem"}}>{this.props.description}</Card.Text>
+          
+          <p  style={{ fontSize: "1.5rem"}}>❤️ {this.state.likes} <Button  style={{ marginLeft: "10.5rem",  fontSize: "1.2rem"}} onClick={this.likesFunction} variant="primary">Like</Button></p>
+        </Card.Body>
+      </Card>
     );
   }
 }
+
 
 export default HornedBeasts;
