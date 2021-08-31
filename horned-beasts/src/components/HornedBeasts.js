@@ -14,10 +14,10 @@ class HornedBeasts extends React.Component {
     this.setState({
       likes: this.state.likes + 1,
     });
+    this.props.handleShowMain(this.props.title,this.props.image_url,this.props.description);
   };
 
   render() {
-    // console.log("props: ", this.props);
     return (
       <Card style={{ width: "21rem", margin:"20px", display: "inline-block"}}>
         <Card.Img
@@ -29,7 +29,6 @@ class HornedBeasts extends React.Component {
         <Card.Body>
           <Card.Title style={{ height: "35px"}}>{this.props.title}</Card.Title>
           <Card.Text   style={{ height: "5.1rem"}}>{this.props.description}</Card.Text>
-          
           <p  style={{ fontSize: "1.5rem"}}>❤️ {this.state.likes} <Button  style={{ marginLeft: "10.5rem",  fontSize: "1.2rem"}} onClick={this.likesFunction} variant="primary">Like</Button></p>
         </Card.Body>
       </Card>
