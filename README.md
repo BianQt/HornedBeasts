@@ -34,3 +34,16 @@ Start time: 4:30 PM
 Finish time: 4:45 PM
 
 Actual time needed to complete: 15 Min
+
+## Class03 - Lab Time Estimate
+
+### Feature #1: Display images
+Number and name of feature: Feature #1: Display images
+
+Estimate of time needed to complete: 2hr
+
+Start time: 1:30 PM
+
+Finish time: 3:50 PM
+
+Actual time needed to complete: 2.2hr

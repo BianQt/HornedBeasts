@@ -1,20 +1,33 @@
 import React from "react";
 import HornedBeasts from "./HornedBeasts";
-import hornedAnimals from "./data.json";
+// import hornedAnimals from "./data.json";
 
-let animalsList = hornedAnimals.map((animal) => {
-
-  return <HornedBeasts
-    image_url={animal.image_url}
-    title={animal.title}
-    description={animal.description}
-    keyword={animal.keyword}
-    horns={animal.horns} />;
-});
 
 class Main extends React.Component {
+
+  handleShowMain = (tit ,img, des ) => {
+    this.props.showFunction(tit, img, des);
+    console.log(tit, img, des);
+  };
+
   render() {
-    return <main>{animalsList}</main>;
+    
+    return (
+      <main>
+        {this.props.animals.map((animal) => {
+          return (
+            <HornedBeasts
+              image_url={animal.image_url}
+              title={animal.title}
+              description={animal.description}
+              keyword={animal.keyword}
+              horns={animal.horns}
+              handleShowMain ={this.handleShowMain}
+            />
+          );
+        })}
+      </main>
+    );
   }
 }
 
