@@ -5,10 +5,10 @@ import HornedBeasts from "./HornedBeasts";
 
 class Main extends React.Component {
 
-  handleShowMain = (tit ,img, des ) => {
-    this.props.showFunction(tit, img, des);
-    console.log(tit, img, des);
-  };
+  // handleShowMain = (tit ,img, des ) => {
+  //   this.props.showFunction(tit, img, des);
+  //   console.log(tit, img, des);
+  // };
 
   render() {
     
@@ -22,7 +22,7 @@ class Main extends React.Component {
               description={animal.description}
               keyword={animal.keyword}
               horns={animal.horns}
-              handleShowMain ={this.handleShowMain}
+              handleShowMain ={this.props.showFunction}
             />
           );
         })}
