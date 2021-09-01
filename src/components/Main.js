@@ -42,7 +42,7 @@ class Main extends React.Component {
   render() {
     return (
       <main>
-        <Form.Select size="lg" onChange={this.submittion}>
+        <Form.Select size="lg" onChange={this.submittion} style={{  width: "550px", margin: "50px 20px"}}>
           <option onClick="submit" value="all">
             All
           </option>
