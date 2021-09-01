@@ -121,3 +121,16 @@ Start time: 1:30 PM
 Finish time: 3:50 PM
 
 Actual time needed to complete: 2.2hr
+
+## Class04 - Lab Time Estimate
+
+### Feature 1. Filter by Numbers of Horns
+Number and name of feature: Feature 1. Filter by Numbers of Horns
+
+Estimate of time needed to complete: 45 Min
+
+Start time: 1:50 PM
+
+Finish time: 3:20 PM
+
+Actual time needed to complete: 1:30hr
