@@ -1,7 +1,7 @@
 import React from "react";
 import HornedBeasts from "./HornedBeasts";
 import Form from "react-bootstrap/Form";
-// import Button from "react-bootstrap/Button";
+
 
 class Main extends React.Component {
   constructor(props) {
@@ -29,6 +29,11 @@ class Main extends React.Component {
         renderArr: this.props.animals.filter((element) => element.horns === 2),
       });
     }
+    if (event.target.value === "3") {
+      this.setState({
+        renderArr: this.props.animals.filter((element) => element.horns === 3),
+      });
+    }
     if (event.target.value === "100") {
       this.setState({
         renderArr: this.props.animals.filter(
@@ -50,6 +55,7 @@ class Main extends React.Component {
             1 Horn
           </option>
           <option value="2">2 Horns</option>
+          <option value="3">3 Horns</option>
           <option value="100">100 Horns</option>
         </Form.Select>
 
